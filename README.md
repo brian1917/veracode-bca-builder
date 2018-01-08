@@ -7,6 +7,8 @@ The script takes three parameters:
 2. The scheme
 3. The output directory (if using script in a Jenkins build, this should be your Jenkins workspace so the Veracode plugin can be used to upload)
 
+```./veracode-bca-builder.sh /Users/bpitta/iOS_apps/nextcloud/ios/Nextcloud.xcodeproj Nextcloud /Users/bpitta/.jenkins/jobs/NextCloud_iOS/workspace```
+
 ## Build Settings
 The script calls `xcodebuild` with `-destination generic/platform=iOS`, `DEBUG_INFORMATION_FORMAT=dwarf-with-dsym`, and `ENABLE_BITCODE=YES`.
 
