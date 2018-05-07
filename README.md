@@ -17,5 +17,8 @@ For Build Configuration, select Debug.)
 
 See here for the full Veracode build settings documentation: https://help.veracode.com/reader/4EKhlLSMHm5jC8P8j3XccQ/PJWz14TuPBwScC2EpJtB2Q
 
+## Troubleshooting
+If failing with:
+```xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance```
 
-
+you may try running ```sudo xcode-select -s /Applications/Xcode.app/Contents/Developer```
