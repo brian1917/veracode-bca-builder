@@ -24,11 +24,11 @@ cd $WORKING_DIR
 xcodebuild archive -"${XCODE_TYPE}" "$PROJECT_PATH" -scheme "$SCHEME" -archivePath "$PROJECT" -destination generic/platform=iOS DEBUG_INFORMATION_FORMAT=dwarf-with-dsym ENABLE_BITCODE=YES
 
 # MOVE APPLICATIONS DIRECTORY OUT OF PRODUCTS AND UP TO PARENT
-mv ${PROJECT}.xcarchive/Products/Applications/ ${PROJECT}.xcarchive/Payload/
+mv "${PROJECT}.xcarchive/Products/Applications/" "${PROJECT}.xcarchive/Payload/"
 
 # REMOVE THE PRODUCTS DIRECTORY
-rmdir ${PROJECT}.xcarchive/Products/
+rmdir "${PROJECT}.xcarchive/Products/"
 
 # ZIP ALL FILES IN XCODE ARCHIVE
-cd ${PROJECT}.xcarchive
-zip -r ${OUTPUT_LOCATION}/${PROJECT}.bca $(ls)
+cd "${PROJECT}.xcarchive"
+zip -r "${OUTPUT_LOCATION}/${PROJECT}.bca" $(ls)
